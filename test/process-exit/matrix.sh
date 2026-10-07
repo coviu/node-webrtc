@@ -2,8 +2,7 @@
 #
 # Run repro.js under several Node versions (via fnm) and report how each exits.
 #
-#   test/process-exit/matrix.sh                 # Node 16..26, 5 runs each
-#   RUNS=10 test/process-exit/matrix.sh 18 20 22
+#   test/process-exit/matrix.sh
 #
 # Versions must already be installed (`fnm install <major>`). Node is invoked
 # directly rather than through `fnm exec`, because fnm exec reports a child
@@ -13,12 +12,8 @@ set -u
 
 cd "$(dirname "$0")/../.."
 
-runs=${RUNS:-5}
-if [ $# -gt 0 ]; then
-  majors=("$@")
-else
-  majors=($(seq 16 26))
-fi
+runs=10
+majors=(12 13 14 15 16 17 18 19 20 21 22 23 24 25 26)
 
 describe() {
   case $1 in
