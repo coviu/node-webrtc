@@ -13,6 +13,7 @@ require("./get-configuration");
 require("./get-settings");
 require("./i420helpers");
 require("./iceservers");
+require("./keepalive");
 require("./mediastream");
 require("./multiconnect"); // Seems a little slow...
 require("./pass-interface-to-method");
