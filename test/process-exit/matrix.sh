@@ -13,7 +13,7 @@ set -u
 cd "$(dirname "$0")/../.."
 
 runs=10
-majors=(12 13 14 15 16 17 18 19 20 21 22 23 24 25 26)
+majors=(16 17 18 19 20 21 22 23 24 25 26)
 
 describe() {
   case $1 in
